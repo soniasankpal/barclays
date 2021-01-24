@@ -1,0 +1,119 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+    <head> 
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+       
+        <meta name="author" content="Sonia Sunil Sankpal">
+        
+        <script src="fetch.js"></script>
+        <link rel="stylesheet" href="css/bootstrap.min.css"> 
+        <link rel="stylesheet" href="css/mystyle.css"> 
+        
+    
+        <title>Books_website</title> 
+
+        <script type="text/javascript">
+            
+              function validateForm()
+              {
+                  if( document.myForm.fname.value == "" )
+                 {
+                    alert( "Please provide your first name!" );
+                    document.myForm.fname.focus() ;
+                    return false;
+                 }
+                if( document.myForm.lname.value == "" )
+                 {
+                    alert( "Please provide your last name!" );
+                    document.myForm.lname.focus() ;
+                    return false;
+                 }
+                 
+                 if( document.myForm.mail.value == "" )
+                 {
+                    alert( "Please provide your Email ID!" );
+                    document.myForm.mail.focus() ;
+                    return false;
+                 }
+
+                 if( document.myForm.password1.value != document.myForm.password2.value )
+                 {
+                    alert( "Password does not match" );
+                    document.myForm.password1.focus() ;
+                    return false;
+                 }
+
+                 
+            }
+                
+         </script>
+        
+    </head> 
+    <body> 
+        <div class="header">
+            <a href="index.html" class="logo">BookStore</a>
+            <div class="header-right">
+              <a  href="index.html">Home</a>
+              <a class="active" href="signup.html">SignUp</a>
+              <a href="signin.html">SignIn</a>
+            </div>
+          </div>
+        
+
+          <form name="myForm" method="post" action="subscribe.php">
+            <div class="form-group">
+            <label for="exampleInputFirstName"><b>First Name</b></label>
+            <input type="text" name="fname" class="form-control" id="exampleInputFirstName"  placeholder="First Name">
+            </div>
+
+
+            <div class="form-group">
+            <label for="exampleInputLastName"><b>Last Name</b></label>
+            <input type="text" class="form-control" id="exampleInputLastName" name="lname" placeholder="Last Name">
+            </div>
+
+
+             <div class="form-group">
+            <label for="exampleInputEmail1"><b>Email address</b></label>
+            <input type="email" name="emailid" class="form-control" id="exampleInputEmail1" placeholder="Email">
+            </div>
+            
+            <div class="form-group">
+                <label for="exampleInputLastName"><b>Password</b></label>
+                <input type="password" class="form-control" id="exampleInputLastPassword1" name="password1" placeholder="Password">
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputLastName"><b>Reenter Password</b></label>
+                    <input type="password" class="form-control" id="exampleInputLastPassword2" name="password2" placeholder="Password">
+                </div>
+    
+
+            </br>
+                
+                    
+            <input onclick="validateForm()" type="submit"></input>	
+               
+        </form>
+
+        <!--form action="subscribe.php" method="POST"> First name:
+
+            <input type="text" name="firstname"> <br> Last name:
+    
+            <input type="text" name="lastname"> 
+    
+            <input type="hidden" name="form_submitted" value="1" />
+    
+            <input type="submit" value="Submit">
+    
+        </form--->
+    
+        
+
+        
+
+
+    </body> 
+</html> 
